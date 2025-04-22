@@ -7,9 +7,9 @@ from collections import defaultdict
 
 # Load environment variables
 load_dotenv()
-DATABRICKS_HOST = os.getenv("DATABRICKS_HOST")
-DATABRICKS_PATH = os.getenv("DATABRICKS_PATH")
-DATABRICKS_TOKEN = os.getenv("DATABRICKS_TOKEN")
+DATABRICKS_HOST = st.secrets["DATABRICKS_HOST"]
+DATABRICKS_PATH = st.secrets["DATABRICKS_PATH"]
+DATABRICKS_TOKEN = st.secrets["DATABRICKS_TOKEN"]
 
 @st.cache_data
 def load_data():
